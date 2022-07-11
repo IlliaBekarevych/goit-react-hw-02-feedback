@@ -1,0 +1,16 @@
+.feedback {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  width: 90px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(110, 110, 255, 0.473);
+  border-radius: 15px;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
