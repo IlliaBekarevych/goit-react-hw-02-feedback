@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions';
-import Statistics from './Statistics';
-import Section from './Section';
-import Notification from './Notification';
-import a from './app.module.css'
+import FeedbackOptions from 'components/FeedbackOptions';
+import Statistics from 'components/Statistics';
+import Section from 'components/Section';
+import Notification from 'components/Notification';
+import a from './app.module.css';
 
 class App extends Component {
   state = {
@@ -12,7 +12,7 @@ class App extends Component {
     bad: 0,
   };
 
-  handelClick = name => {
+  onLeaveFeedback = name => {
     this.setState(prevState => ({ [name]: prevState[name] + 1 }));
   };
 
@@ -38,7 +38,7 @@ class App extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={this.handelClick}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
         <Section title="Statistics">
